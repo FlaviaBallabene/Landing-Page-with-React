@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 //create your first component
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="text-center">
       <nav
@@ -33,22 +34,22 @@ const Navbar = () => {
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  Home
+                  {props.nav1}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  About
+                  {props.nav2}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Services
+                  {props.nav3}
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Contact
+                  {props.nav4}
                 </a>
               </li>
             </ul>
@@ -57,6 +58,13 @@ const Navbar = () => {
       </nav>
     </div>
   );
+};
+
+Navbar.PropTypes = {
+  nav1: PropTypes.string.isRequired,
+  nav2: PropTypes.string.isRequired,
+  nav3: PropTypes.string.isRequired,
+  nav4: PropTypes.string.isRequired,
 };
 
 export default Navbar;
