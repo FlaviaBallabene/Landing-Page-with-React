@@ -1,23 +1,12 @@
 import React from "react";
 
-//create your first component
 const Footer = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  return (
+    <footer style={{ backgroundColor: "black", height: "50px", position: "fixed", bottom: "0", width: "100%", zIndex: "1000" }}>
+      {/* Empty div for the line */}
+      <div style={{ borderBottom: "1px solid gray" }}></div>
+    </footer>
+  );
 };
 
 export default Footer;
